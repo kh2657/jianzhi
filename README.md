@@ -86,7 +86,7 @@
 
 ```bash
 git clone https://github.com/kh2657/jianzhi.git
-cd studybench
+cd jianzhi
 npm install
 npm run fixtures   # 首次必跑：生成测试夹具
 npm run dev        # 热更新开发模式

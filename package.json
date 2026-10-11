@@ -1,8 +1,8 @@
 {
-  "name": "studybench",
+  "name": "jianzhi",
   "productName": "数学学习工作台",
   "version": "0.1.0",
-  "description": "本地优先的数学学习工作台：PDF 阅读与可回溯摘录、手写批注、Markdown/KaTeX 笔记与 Wiki、文献库与学习日历",
+  "description": "渐知 · 本地优先的科研学习工作台：PDF 阅读与可回溯摘录、手写批注、Markdown/KaTeX 笔记与 Wiki、文献库与学习日历",
   "private": true,
   "author": "kh",
   "engines": {

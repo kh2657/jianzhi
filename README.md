@@ -1,12 +1,14 @@
 <div align="center">
 
-<img src="resources/logo.png" width="104" alt="StudyBench" />
+<img src="resources/logo.png" width="104" alt="渐知 Jianzhi" />
 
-# StudyBench · 数学学习工作台
+# 渐知 · 科研学习工作台
 
-**本地优先的数学学习工作台 —— 读文献、留可回溯的摘录、写会生长的笔记。**
+**本地优先的科研学习工作台 —— 读文献、留可回溯的摘录、写会生长的笔记。**
 
-*A local-first study workbench: read papers, excerpt with traceable anchors, and grow notes that keep up with you.*
+> 渐知：取「渐知渐悟」之意——学问是一页一页读出来的。
+
+*Jianzhi — a local-first research study workbench: read papers, excerpt with traceable anchors, and grow notes that keep up with you. Knowledge arrives gradually.*
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-81001e.svg)](LICENSE)
 ![Electron](https://img.shields.io/badge/Electron-40-47848F?logo=electron&logoColor=white)
@@ -26,11 +28,11 @@
 
 ## 这是什么
 
-StudyBench 是一个跑在桌面上的**个人学习工作台**，为读数学文献的场景设计：PDF 打开就能读，划选即成摘录且**永远能回到原文位置**，笔记用 Markdown + KaTeX，文献按你自己的分区组织。没有账号、没有云端——你的学习记录是一文件夹可读的文件，放在你自己的磁盘里。
+渐知（Jianzhi）是一个跑在桌面上的**个人学习工作台**，为科研文献精读的场景设计：PDF 打开就能读，划选即成摘录且**永远能回到原文位置**，笔记用 Markdown + KaTeX，文献按你自己的分区组织。没有账号、没有云端——你的学习记录是一文件夹可读的文件，放在你自己的磁盘里。
 
 界面当前为中文。
 
-> **English**: StudyBench is a local-first desktop workbench for studying mathematics. Read PDFs, excerpt with anchors that always trace back to the source, write Markdown + KaTeX notes, organize papers in your own sections, and review your progress on a learning calendar. No accounts, no cloud — your library is a folder of human-readable files on your own disk. UI is currently Chinese.
+> **English**: Jianzhi (渐知， "gradual knowing") is a local-first desktop workbench for research reading. Read PDFs, excerpt with anchors that always trace back to the source, write Markdown + KaTeX notes, organize papers in your own sections, and review your progress on a learning calendar. No accounts, no cloud — your library is a folder of human-readable files on your own disk. UI is currently Chinese.
 
 ## 特性
 
@@ -78,12 +80,12 @@ StudyBench 是一个跑在桌面上的**个人学习工作台**，为读数学�
 
 ### 下载
 
-从 [Releases](https://github.com/kh2657/studybench/releases) 下载 Windows 安装包（macOS 请从源码运行）。
+从 [Releases](https://github.com/kh2657/jianzhi/releases) 下载 Windows 安装包（macOS 请从源码运行）。
 
 ### 从源码运行
 
 ```bash
-git clone https://github.com/kh2657/studybench.git
+git clone https://github.com/kh2657/jianzhi.git
 cd studybench
 npm install
 npm run fixtures   # 首次必跑：生成测试夹具

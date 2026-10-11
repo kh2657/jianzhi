@@ -1,0 +1,15 @@
+.ideas-toolbar { display: flex; align-items: center; gap: 20px; flex-wrap: wrap; margin: 0 0 20px; }
+.ideas-tabs { display: flex; gap: 4px; }
+.ideas-tabs .btn { border-color: transparent; background: transparent; }
+.ideas-tabs .btn[aria-pressed="true"] { background: var(--surface-2); border-color: var(--hairline); }
+.ideas-search { margin-left: auto; width: min(300px, 100%); }
+.ideas-list { border-top: 1px solid var(--hairline); }
+.ideas-row { display: flex; align-items: flex-start; gap: 24px; padding: 22px 0; border-bottom: 1px solid var(--hairline); }
+.ideas-editor { width: 100%; min-height: 120px; resize: vertical; line-height: 1.65; }
+.ideas-row .memo-actions { max-width: 240px; }
+@media (max-width: 900px) {
+  .ideas-row { flex-direction: column; gap: 12px; }
+  .ideas-row .memo-body { width: 100%; }
+  .ideas-row .memo-actions { max-width: none; justify-content: flex-start; }
+  .ideas-search { margin-left: 0; flex: 1; }
+}

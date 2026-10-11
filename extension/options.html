@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <title>数学学习工作台助手 · 设置</title>
+  <style>
+    body { font: 14px/1.6 system-ui, "Microsoft YaHei", sans-serif; margin: 0; padding: 24px; max-width: 640px; color: #1f2328; background: #fafafa; }
+    h1 { font-size: 18px; margin: 0 0 4px; }
+    p.hint { color: #57606a; margin: 4px 0 20px; }
+    label { display: block; margin-bottom: 14px; font-weight: 600; }
+    input { display: block; width: 100%; box-sizing: border-box; margin-top: 4px; padding: 7px 10px; font: inherit; border: 1px solid #d0d7de; border-radius: 6px; background: #fff; }
+    .row { display: flex; gap: 8px; align-items: center; }
+    button { padding: 7px 14px; font: inherit; border: 1px solid #d0d7de; border-radius: 6px; background: #fff; cursor: pointer; }
+    button.primary { background: #2f5a9e; border-color: #2f5a9e; color: #fff; }
+    #status { margin-top: 12px; padding: 8px 10px; border-radius: 6px; display: none; }
+    #status.ok { display: block; background: #e6f4ea; color: #1a7f37; }
+    #status.bad { display: block; background: #fdebea; color: #c62828; }
+    ol { color: #57606a; padding-left: 20px; }
+    code { background: #eff1f3; padding: 1px 5px; border-radius: 4px; }
+  </style>
+</head>
+<body>
+  <h1>连接工作台</h1>
+  <p class="hint">扩展只与本机运行的工作台通信。端口与令牌在工作台的「文献库 → 浏览器导入」弹窗里查看。</p>
+  <label>服务地址
+    <input id="serverUrl" placeholder="http://127.0.0.1:31415" />
+  </label>
+  <label>连接令牌
+    <input id="token" placeholder="粘贴工作台弹窗里的令牌" />
+  </label>
+  <div class="row">
+    <button id="save" class="primary">保存</button>
+    <button id="test">测试连接</button>
+  </div>
+  <div id="status"></div>
+  <h1 style="margin-top: 28px; font-size: 15px;">使用方法</h1>
+  <ol>
+    <li>打开论文网页（如 arXiv 摘要页、出版商页面）或 PDF；</li>
+    <li>点浏览器工具栏的工作台图标（或右键 →「导入此页面/链接」）；</li>
+    <li>回到工作台「文献库 → 待整理」查看。书目不全的条目会自动联网回填（Crossref/arXiv）。</li>
+  </ol>
+  <script src="options.js"></script>
+</body>
+</html>

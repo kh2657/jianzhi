@@ -1,0 +1,16 @@
+# 统一换行：仓库内一律 LF（Windows 检出也不转 CRLF），消除 diff 噪音与 shell 脚本兼容问题
+* text=auto eol=lf
+
+# Windows 专用批处理必须是 CRLF
+*.bat text eol=crlf
+
+# 二进制
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.heic binary
+*.pdf binary
+*.woff binary
+*.woff2 binary
+*.ttf binary
+*.exe binary

@@ -1,0 +1,12 @@
+{
+  "manifest_version": 3,
+  "name": "数学学习工作台助手",
+  "version": "0.1.0",
+  "description": "把当前论文网页或 PDF 一键导入数学学习工作台（仅本机 127.0.0.1，无上传）。",
+  "permissions": ["activeTab", "scripting", "storage", "downloads", "contextMenus", "notifications"],
+  "host_permissions": ["http://127.0.0.1/*", "http://localhost/*", "http://*/*", "https://*/*"],
+  "background": { "service_worker": "background.js" },
+  "action": { "default_title": "导入到数学学习工作台", "default_icon": { "16": "icons/16.png", "48": "icons/48.png", "128": "icons/128.png" } },
+  "options_ui": { "page": "options.html", "open_in_tab": true },
+  "icons": { "16": "icons/16.png", "48": "icons/48.png", "128": "icons/128.png" }
+}

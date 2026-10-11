@@ -1,0 +1,28 @@
+#!/bin/sh
+# pre-push 门禁：把「类型检查 + 全部单元测试」钉在 push 之前（约 1 分钟）。
+#
+# 为什么只到单元测试：全量 E2E 要 4–5 分钟，塞进每次 push 会让门禁本身变成时间黑洞
+# （2026-10-08 之前正是「每次都全量」把开发循环拖垮）。分工是——
+#   开发循环：npm run test:fast / e2e:fast（只跑受影响的）
+#   push 之前：本脚本（typecheck + 全部单测）
+#   交付/CI：npm run gate 或 MATHWB_PUSH_E2E=1 git push（含全量 E2E）
+#
+# 跳过：MATHWB_SKIP_HOOKS=1 git push  或  git push --no-verify
+# 详见 AGENTS.md「测试与门禁」。
+set -e
+
+if [ "$MATHWB_SKIP_HOOKS" = "1" ]; then
+  echo "pre-push: MATHWB_SKIP_HOOKS=1，已跳过门禁"
+  exit 0
+fi
+
+echo "pre-push: 类型检查 + 全部单元测试（跳过：MATHWB_SKIP_HOOKS=1 git push）" >&2
+npm run typecheck
+npm run test
+
+if [ "$MATHWB_PUSH_E2E" = "1" ]; then
+  echo "pre-push: MATHWB_PUSH_E2E=1 → 追加全量端到端"
+  npm run e2e
+fi
+
+echo "pre-push: 通过"

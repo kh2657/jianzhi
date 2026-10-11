@@ -1,0 +1,27 @@
+node_modules/
+out/
+dist/
+/fixtures/
+src/renderer/public/pdfjs/
+*.log
+.DS_Store
+test-results/
+*.tsbuildinfo
+# 调试产物：根目录散落的临时日志（历史上被误提交过，见 CHANGELOG「仓库公开前清理」）
+debug-out.txt
+e2e-dbg*.txt
+e2e-out.txt
+work/
+# 根目录散落的表格（本机工作文件，不入库）
+/*.xlsx
+# dev:isolated 的隔离数据目录（本机运行数据，不入库）
+.dev-data/
+# 个人/本机上下文：不入库（公开仓库）
+.workbuddy/
+.claude/
+.omx/
+.zcode/
+STATUS.md
+.env
+experiments/
+scripts/import-zotero.ts
